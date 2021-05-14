@@ -1,0 +1,58 @@
+$winColor: #0F9D58;
+$lostColor: #DB4437;
+
+.container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: grid;
+    grid-template-rows: auto min-content;
+
+    .form {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+
+        .label {
+            margin-bottom: 10px;
+        }
+
+        .message {
+            margin-top: 10px;
+        }
+    }
+
+    .footer {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin-bottom: 10px;
+
+        .guess {
+            border: 1px solid rgba($color: #000000, $alpha: 0.2);
+            display: grid;
+            align-items: center;
+            justify-content: center;
+
+            .value {
+                padding: 10px;
+                font-size: 2em;
+            }
+
+            .original {
+                padding: 10px;
+            }
+
+            &.won {
+                color: $winColor;
+            }
+
+            &.lost {
+                color: $lostColor;
+            }
+        }
+    }
+}
